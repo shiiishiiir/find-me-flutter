@@ -1,0 +1,62 @@
+import 'package:findme/screen/public_toilet/toilet_page.dart';
+import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
+
+class PublicToilet extends StatefulWidget {
+  static const routeName = '/public-toilet';
+
+  @override
+  _PublicToiletState createState() => _PublicToiletState();
+}
+
+class _PublicToiletState extends State<PublicToilet> {
+  var latitude;
+  var longitude;
+
+  Future<void> _currentLocation() async {
+    Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+    setState(() {
+      latitude = position.latitude;
+      longitude = position.longitude;
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _currentLocation();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    print(latitude);
+    print(longitude);
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Find Public Toilet '),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: FlatButton(
+          onPressed: () async {
+            await _currentLocation();
+            print('shishir');
+            Navigator.of(context).pushNamed(
+              ToiletPage.routeName,
+              arguments: {'lati': latitude, 'long': longitude},
+            );
+          },
+          color: Colors.indigo[100],
+          textColor: Colors.white,
+          child: Icon(
+            Icons.search,
+            size: 34,
+          ),
+          padding: EdgeInsets.all(36),
+          shape: CircleBorder(),
+        ),
+      ),
+    );
+  }
+}
