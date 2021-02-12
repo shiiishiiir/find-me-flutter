@@ -2,6 +2,7 @@ import 'package:findme/screen/hospital/hospital_screen.dart';
 import 'package:findme/screen/mosque/mosque_screen.dart';
 import 'package:findme/screen/police_station/police_station_screen.dart';
 import 'package:findme/screen/public_toilet/public_toilet_screen.dart';
+import 'package:findme/screen/street_food/street_food_list.dart';
 import 'package:findme/widget/component/blockWidget.dart';
 import 'package:flutter/material.dart';
 
@@ -69,7 +70,7 @@ class BlockWidgetScreen extends StatelessWidget {
               iconWidth: 50.0,
               text: 'Street Food',
               blockFunction: () {
-                // Navigator.of(context).pushNamed(StreetFood.routeName);
+                Navigator.of(context).pushNamed(StreetFoodList.routeName);
               },
             ),
             SizedBox(

@@ -12,6 +12,11 @@ import 'package:findme/screen/police_station/police_page.dart';
 import 'package:findme/screen/police_station/police_station_screen.dart';
 import 'package:findme/screen/public_toilet/public_toilet_screen.dart';
 import 'package:findme/screen/public_toilet/toilet_page.dart';
+import 'package:findme/screen/street_food/chotpoti/chotpoti-list.dart';
+import 'package:findme/screen/street_food/fuchka/fuchka-list.dart';
+import 'package:findme/screen/street_food/street_food_list.dart';
+import 'package:findme/screen/street_food/vajapora/vajapora-list.dart';
+import 'package:findme/screen/street_food/velpuri/velpuri-list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -46,6 +51,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.white,
         accentColor: Colors.indigoAccent,
       ),
+      debugShowCheckedModeBanner: false,
       home: BottomTab(),
       routes: {
         BottomTab.routeName: (ctx) => BottomTab(),
@@ -60,6 +66,11 @@ class MyApp extends StatelessWidget {
         HospitalPage.routeName: (ctx) => HospitalPage(),
         PublicToilet.routeName: (ctx) => PublicToilet(),
         ToiletPage.routeName: (ctx) => ToiletPage(),
+        StreetFoodList.routeName: (ctx) => StreetFoodList(),
+        ChotpotiList.routeName: (ctx) => ChotpotiList(),
+        FuchkaList.routeName: (ctx) => FuchkaList(),
+        VajaporaList.routeName: (ctx) => VajaporaList(),
+        VelpuriList.routeName: (ctx) => VelpuriList(),
       },
     );
   }
