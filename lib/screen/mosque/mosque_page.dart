@@ -20,7 +20,7 @@ class Mosquestate extends State<MosquePage> {
 
   Future<void> getNearbyPlaces(latitude, longitude) async {
     var url =
-        "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=$latitude,$longitude&radius=5000&types=Mosque&key=AIzaSyDLNRo0MW3EEwVDGjsIH-H-_GXuTVKEiVI";
+        "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=$latitude,$longitude&radius=5000&types=mosque&key=AIzaSyDLNRo0MW3EEwVDGjsIH-H-_GXuTVKEiVI";
     print(url);
     var reponse = await http.get(url, headers: {"Accept": "application/json"});
 

@@ -3,7 +3,13 @@ import 'package:findme/app_theme.dart';
 import 'package:findme/home_bottom_tab.dart';
 import 'package:findme/screen/about_screen.dart';
 import 'package:findme/screen/article_details.dart';
+import 'package:findme/screen/article_detailsf.dart';
+import 'package:findme/screen/article_detailsp.dart';
 import 'package:findme/screen/contact_screen.dart';
+import 'package:findme/screen/feriwala/feriwala_list.dart';
+import 'package:findme/screen/feriwala/fruits/fruits-list.dart';
+import 'package:findme/screen/feriwala/shak_shobji/shak-shobji-list.dart';
+import 'package:findme/screen/feriwala/vegetable/vegetable-list.dart';
 import 'package:findme/screen/hospital/hospital_page.dart';
 import 'package:findme/screen/hospital/hospital_screen.dart';
 import 'package:findme/screen/mosque/mosque_page.dart';
@@ -42,6 +48,7 @@ class MyApp extends StatelessWidget {
       systemNavigationBarDividerColor: Colors.white,
       systemNavigationBarIconBrightness: Brightness.light,
     ));
+    var routeName = ArticleDetailsp.routeName;
     return MaterialApp(
       title: 'Find Me',
       theme: ThemeData(
@@ -71,6 +78,12 @@ class MyApp extends StatelessWidget {
         FuchkaList.routeName: (ctx) => FuchkaList(),
         VajaporaList.routeName: (ctx) => VajaporaList(),
         VelpuriList.routeName: (ctx) => VelpuriList(),
+        FeriwalaList.routeName: (ctx) => FeriwalaList(),
+        FruitsList.routeName: (ctx) => FruitsList(),
+        ShakShobjiList.routeName: (ctx) => ShakShobjiList(),
+        VegetableList.routeName: (ctx) => VegetableList(),
+        ArticleDetailsf.routeName: (ctx) => ArticleDetailsf(),
+        ArticleDetailsp.routeName: (ctx) => ArticleDetailsp(),
       },
     );
   }

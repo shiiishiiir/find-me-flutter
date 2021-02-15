@@ -22,12 +22,13 @@ class AboutScreen extends StatelessWidget {
               SizedBox(
                 height: 5.0,
               ),
-              Text('for finding nearby street food, pubic toilet, mosque, police stations etc.'),
+              Text(
+                  'for finding nearby street food, feriwala, pubic toilet, mosque, police stations etc.'),
               SizedBox(
                 height: 20.0,
               ),
               Text(
-                '1. We could know the locations of nearby police stations, hospitals, shopping malls and etc.',
+                '1. We could know the locations of nearby police stations, hospitals, mosques and etc.',
                 textAlign: TextAlign.justify,
                 style: TextStyle(height: 1.3, fontSize: 14),
               ),

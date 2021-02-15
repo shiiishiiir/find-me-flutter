@@ -1,3 +1,4 @@
+import 'package:findme/screen/feriwala/feriwala_list.dart';
 import 'package:findme/screen/hospital/hospital_screen.dart';
 import 'package:findme/screen/mosque/mosque_screen.dart';
 import 'package:findme/screen/police_station/police_station_screen.dart';
@@ -80,7 +81,7 @@ class BlockWidgetScreen extends StatelessWidget {
               icon: "assets/findme/block-logo/feri.png",
               text: 'Feriwala',
               blockFunction: () {
-                // Navigator.of(context).pushNamed(Feriwala.routeName);
+                 Navigator.of(context).pushNamed(FeriwalaList.routeName);
               },
             ),
           ],
